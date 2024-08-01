@@ -1,11 +1,11 @@
 {
-  "host": "127.0.0.1",
+  "host": "34.150.25.53",
   "port": 4000,
   "https": false,
-  "webSocketHost": "127.0.0.1",
+  "webSocketHost": "34.150.25.53",
   "webSocketPort": 4001,
   "webSocketHttps": false,
-  "webSocketDevAddress": "127.0.0.1:4001",
+  "webSocketDevAddress": "34.150.25.53:4001",
   "useWebSocketDevAddress": true,
   "webSocketRegions": {
     "na": "na.resurviv.io",
