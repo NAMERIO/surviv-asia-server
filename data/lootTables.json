@@ -1,0 +1,272 @@
+{
+  "tier_world": {
+    "tier_scopes": { "count": 1, "weight": 1 },
+    "tier_armor": { "count": 1, "weight": 1.5 },
+    "tier_packs": { "count": 1, "weight": 0.5 },
+    "tier_medical": { "count": 1, "weight": 1.5 },
+    "tier_ammo": { "count": 1, "weight": 2.5 },
+    "tier_guns": { "count": 1, "weight": 2 }
+  },
+  "tier_surviv": {
+    "tier_scopes": { "count": 1, "weight": 1 },
+    "tier_armor": { "count": 1, "weight": 1 },
+    "tier_medical": { "count": 1, "weight": 4 },
+    "tier_packs": { "count": 1, "weight": 1 }
+  },
+  "tier_container": {
+    "tier_scopes": { "count": 1, "weight": 0.2 },
+    "tier_armor": { "count": 1, "weight": 1 },
+    "tier_packs": { "count": 1, "weight": 0.3 },
+    "tier_medical": { "count": 1, "weight": 0.8 },
+    "tier_ammo": { "count": 1, "weight": 0.5 },
+    "tier_guns": { "count": 1, "weight": 0.6 }
+  },
+  "tier_leaf_pile": {
+    "tier_scopes": { "count": 1, "weight": 1 },
+    "tier_armor": { "count": 1, "weight": 1.5 },
+    "tier_packs": { "count": 1, "weight": 1 },
+    "tier_medical": { "count": 1, "weight": 1 },
+    "tier_ammo": { "count": 1, "weight": 1 }
+  },
+  "tier_soviet": {
+    "tier_scopes": { "count": 1, "weight": 1 },
+    "tier_armor": { "count": 1, "weight": 1.5 },
+    "tier_packs": { "count": 1, "weight": 1 },
+    "tier_medical": { "count": 1, "weight": 2 },
+    "tier_ammo": { "count": 1, "weight": 3 },
+    "tier_guns": { "count": 1, "weight": 6 }
+  },
+  "tier_toilet": {
+    "tier_scopes": { "count": 1, "weight": 0.5 },
+    "tier_guns": { "count": 1, "weight": 0.2 },
+    "tier_medical": { "count": 1, "weight": 1.0 }
+  },
+  "tier_scopes": {
+    "2xscope": { "count": 1, "weight": 0.7 },
+    "4xscope": { "count": 1, "weight": 0.5 },
+    "8xscope": { "count": 1, "weight": 0 },
+    "15xscope": { "count": 1, "weight": 0 }
+  },
+  "tier_armor": {
+    "helmet01": { "count": 1, "weight": 10 },
+    "helmet02": { "count": 1, "weight": 7 },
+    "helmet03": { "count": 1, "weight": 2 },
+    "chest01": { "count": 1, "weight": 10 },
+    "chest02": { "count": 1, "weight": 7 },
+    "chest03": { "count": 1, "weight": 2 }
+  },
+  "tier_packs": {
+    "backpack01": { "count": 1, "weight": 10 },
+    "backpack02": { "count": 1, "weight": 4 },
+    "backpack03": { "count": 1, "weight": 1 }
+  },
+  "tier_medical": {
+    "bandage": { "count": 5, "weight": 8 },
+    "healthkit": { "count": 1, "weight": 5 },
+    "soda": { "count": 1, "weight": 13 },
+    "painkiller": { "count": 1, "weight": 6 }
+  },
+  "tier_throwables": {
+    "frag": { "count": 1, "weight": 1 },
+    "smoke": { "count": 1, "weight": 1 },
+    "mirv": { "count": 1, "weight": 0.05 }
+  },
+  "tier_ammo": {
+    "9mm": { "count": 60, "weight": 8 },
+    "762mm": { "count": 60, "weight": 8 },
+    "556mm": { "count": 60, "weight": 8 },
+    "12gauge": { "count": 10, "weight": 10 }
+  },
+  "tier_ammo_crate": {
+    "9mm": { "count": 60, "weight": 5 },
+    "762mm": { "count": 60, "weight": 5 },
+    "556mm": { "count": 60, "weight": 5 },
+    "12gauge": { "count": 10, "weight": 7 },
+    "50AE": { "count": 21, "weight": 0 },
+    "308sub": { "count": 5, "weight": 0 },
+    "flare": { "count": 1, "weight": 0 }
+  },
+  "tier_vending_soda": {
+    "soda": { "count": 1, "weight": 6 },
+    "tier_ammo": { "count": 1, "weight": 3 }
+  },
+  "tier_sv98": {
+    "sv98": { "count": 1, "weight": 1.5 }
+  },
+  "tier_scopes_sniper": {
+    "4xscope": { "count": 1, "weight": 0.20 },
+    "8xscope": { "count": 1, "weight": 0 },
+    "15xscope": { "count": 1, "weight": 0 }
+  },
+  "tier_chrys_02": {
+    "katana": { "count": 1, "weight": 1 }
+  
+  },
+  "tier_chrys_chest": {
+    "nothing": { "count": 1, "weight": 0 },
+    "katana": { "count": 1, "weight": 3 },
+    "katana_rusted": { "count": 1, "weight": 3 },
+    "katana_orchid": { "count": 1, "weight": 3 },
+    "mosin": { "count": 1, "weight": 0.2 },
+    "m4a1": { "count": 1, "weight": 0.3 }
+  },
+  "tier_sledgehammer": {
+    "sledgehammer": { "count": 1, "weight": 1 }
+  },
+  "tier_chest_04": {
+    "p30l": { "count": 1, "weight": 1 },
+    "p30l_dual": { "count": 1, "weight": 0.1 }
+  },
+  "tier_woodaxe": {
+    "woodaxe": { "count": 1, "weight": 1 }
+  },
+  "tier_club_melee": {
+    "machete_taiga": { "count": 1, "weight": 1 }
+  },
+  "tier_guns": {
+    "famas": { "count": 1, "weight": 2 },
+    "hk416": { "count": 1, "weight": 8 },
+    "mk12": { "count": 1, "weight": 0.6 },
+    "pkp": { "count": 1, "weight": 0.0015 },
+    "m249": { "count": 1, "weight": 0.006 },
+    "ak47": { "count": 1, "weight": 8 },
+    "scar": { "count": 1, "weight": 2 },
+    "dp28": { "count": 1, "weight": 1.5 },
+    "mosin": { "count": 1, "weight": 0.2 },
+    "m39": { "count": 1, "weight": 0.5 },
+    "vss": { "count": 1, "weight": 0.1 },
+    "mp5": { "count": 1, "weight": 6 },
+    "mac10": { "count": 1, "weight": 6 },
+    "ump9": { "count": 1, "weight": 3 },
+    "m870": { "count": 1, "weight": 12 },
+    "m1100": { "count": 1, "weight": 0 },
+    "mp220": { "count": 1, "weight": 4 },
+    "saiga": { "count": 1, "weight": 0.1 },
+    "ot38": { "count": 1, "weight": 3 },
+    "m9": { "count": 1, "weight": 5 },
+    "m93r": { "count": 1, "weight": 4 },
+    "glock": { "count": 1, "weight": 4 },
+    "deagle": { "count": 1, "weight": 0.5 },
+    "vector": { "count": 1, "weight": 1 },
+    "sv98": { "count": 1, "weight": 0.03 },
+    "spas12": { "count": 1, "weight": 2 },
+    "qbb97": { "count": 1, "weight": 0.5 },
+    "flare_gun": { "count": 1, "weight": 0 },
+    "flare_gun_dual": { "count": 1, "weight": 0 },
+    "groza": { "count": 1, "weight": 2 },
+    "scout": { "count": 1, "weight": 0.1 },
+    "blr": { "count": 1, "weight": 0.5 },
+    "scorpion": { "count": 1, "weight": 0.5 },
+    "m4a1": { "count": 1, "weight": 0.5 }
+  },
+  "tier_police": {
+    "scar": { "count": 1, "weight": 2 },
+    "helmet03": { "count": 1, "weight": 0.5 },
+    "chest03": { "count": 1, "weight": 0.5 },
+    "backpack03": { "count": 1, "weight": 1 }
+  },
+  "tier_ring_case": {
+    "grozas": { "count": 1, "weight": 5 },
+    "ots38_dual": { "count": 1, "weight": 0 },
+    "m9": { "count": 1, "weight": 0 },
+    "pkp": { "count": 1, "weight": 0.15 },
+    "helmet03_forest": { "count": 1, "weight": 0},
+    "blr": { "count": 1, "weight": 0.3 }
+    
+  },
+  "tier_chest": {
+    "hk416": { "count": 1, "weight": 2 },
+    "ak47": { "count": 1, "weight": 13 },
+    "groza": { "count": 1, "weight": 3 },
+    "famas": { "count": 1, "weight": 1 },
+    "mk12": { "count": 1, "weight": 4 },
+    "mp220": { "count": 1, "weight": 10 },
+    "spas12": { "count": 1, "weight": 9 },
+    "dp28": { "count": 1, "weight": 1 },
+    "mosin": { "count": 1, "weight": 2 },
+    "m39": { "count": 1, "weight": 0.1 },
+    "scar": { "count": 1, "weight": 2 },
+    "saiga": { "count": 1, "weight": 2 },
+    "deagle": { "count": 1, "weight": 0.7 },
+    "sv98": { "count": 1, "weight": 0.2 },
+    "vector": { "count": 1, "weight": 1 },
+    "m249": { "count": 1, "weight": 1 },
+    "pkp": { "count": 1, "weight": 0.3 },
+    "helmet01": { "count": 1, "weight": 0 },
+    "helmet02": { "count": 1, "weight": 0 },
+    "helmet03": { "count": 1, "weight": 0 },
+    "4xscope": { "count": 1, "weight": 0 },
+    "8xscope": { "count": 1, "weight": 0 },
+    "blr": { "count": 1, "weight": 2 },
+    "scorpion": { "count": 1, "weight": 0.5 },
+    "m4a1": { "count": 1, "weight": 0.5 }
+  },
+  "tier_hatchet": {
+    "vector": { "count": 1, "weight": 4 },
+    "hk416": { "count": 1, "weight": 2 },
+    "mp220": { "count": 1, "weight": 1 },
+    "m249": { "count": 1, "weight": 0.1 },
+    "pkp": { "count": 1, "weight": 0.05 },
+    "m9": { "count": 1, "weight": 0 },
+    "blr": { "count": 1, "weight": 1 },
+    "scorpion": { "count": 1, "weight": 0.5 },
+    "m4a1": { "count": 1, "weight": 0.5 }
+  },
+
+
+  
+  "tier_airdrop_rare":{
+    "blr": { "count": 1, "weight": 73},
+    "scout": { "count": 1, "weight": 17},
+    "mosin": { "count": 1, "weight": 5},
+    "bar": { "count": 2, "weight": 5},
+    "scorpion": { "count": 1, "weight": 5 }
+  },
+  "tier_airdrop_armor":{
+    "helmet03": { "count": 2, "weight": 1},
+    "chest03": { "count": 1, "weight": 1},
+    "chest02": { "count": 3, "weight": 2},
+    "helmet02": { "count": 4, "weight": 1}
+  },
+  "tier_airdrop_scopes": {
+    "4xscope": { "count": 2, "weight": 1 }
+  },
+  "tier_airdrop_melee": {
+    "katana": { "count": 1, "weight": 1 }
+  },
+  "tier_airdrop_ammo": {
+    "9mm": { "count": 60, "weight": 3 },
+    "762mm": { "count": 60, "weight": 3 },
+    "556mm": { "count": 60, "weight": 3 },
+    "12gauge": { "count": 10, "weight": 3 },
+    "50AE": { "count": 21, "weight": 3 },
+    "308sub": { "count": 5, "weight": 0 },
+    "flare": { "count": 1, "weight": 0 }
+  },
+
+  "tier_eye_block": {
+    "m9": { "count": 1, "weight": 1 },
+    "ots38_dual": { "count": 1, "weight": 1 },
+    "flare_gun": { "count": 1, "weight": 1 },
+    "colt45": { "count": 1, "weight": 1 },
+    "45acp": { "count": 1, "weight": 0 },
+    "painkiller": { "count": 1, "weight": 1 },
+    "m4a1": { "count": 1, "weight": 0.4 },
+    "m249": { "count": 1, "weight": 0.05 },
+    "m870": { "count": 1, "weight": 9 },
+    "awc": { "count": 1, "weight": 0 },
+    "pkp": { "count": 1, "weight": 3 }
+  },
+  "tier_eye_block_heals": {
+    "painkiller": { "count": 1, "weight": 1 }
+  },
+  "tier_eye_block_armor": {
+    "painkiller": { "count": 1, "weight": 1 }
+  },
+  "tier_eye_block_guns": {
+    "ak47": { "count": 2, "weight": 1 }
+  }
+
+}
+
+
