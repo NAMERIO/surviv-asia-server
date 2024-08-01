@@ -31,8 +31,8 @@ let playerIPs: { [key: string]: string } = {};
 
 // Initialize the game.
 // let game = new Game(GameMode[Config.gamemode]);
-//let game = new Game(GameMode["DeathMatch"]);
-let game = new Game(GameMode["BattleRoyale"]);
+let game = new Game(GameMode["DeathMatch"]);
+// let game = new Game(GameMode["BattleRoyale"]);
 
 // Initialize the server.
 const app = Config.webSocketHttps
