@@ -6,9 +6,9 @@ import {
     ObjectKind,
     WeaponType,
     ScopeTypes,
-    ItemSlot,  
+    ItemSlot,
     AmmoTypes, 
-    MedTypes,    
+    MedTypes,
     DamageType,
     GameMode
 } from "../../utils/constants";
@@ -148,7 +148,7 @@ export class Player extends GameObject {
     };
 
     private _health = 100; // The player's health. Ranges from 0-100.
-    private _boost = 100; // The player's adrenaline. Ranges from 0-100.
+    private _boost = 0; // The player's adrenaline. Ranges from 0-100.
 
     kills = 0;
 
@@ -212,38 +212,38 @@ export class Player extends GameObject {
         emotes: [TypeToId.emote_happyface, TypeToId.emote_thumbsup, TypeToId.emote_surviv, TypeToId.emote_sadface, 0, 0]
     };
 
-    backpackLevel = 3;
-    chestLevel = 3;
-    helmetLevel = 3;
+    backpackLevel = 0;
+    chestLevel = 0;
+    helmetLevel = 0;
     inventory = {
-        "9mm": 420,
-        "762mm": 300,
-        "556mm": 300,
-        "12gauge": 90,
-        "50AE": 200,
-        "308sub": 50,
+        "9mm": 0,
+        "762mm": 0,
+        "556mm": 0,
+        "12gauge": 0,
+        "50AE": 0,
+        "308sub": 0,
         flare: 0,
-        "45acp": 200,
-        frag: 3,
+        "45acp": 0,
+        frag: 5,
         smoke: 0,
         strobe: 0,
-        mirv: 3,
+        mirv: 0,
         snowball: 0,
         potato: 0,
-        bandage: 30,
-        healthkit: 4,
-        soda: 15,
-        painkiller: 4,
+        bandage: 5,
+        healthkit: 0,
+        soda: 0,
+        painkiller: 0,
         "1xscope": 1,
-        "2xscope": 1,
-        "4xscope": 1,
+        "2xscope": 0,
+        "4xscope": 0,
         "8xscope": 0,
         "15xscope": 0
     };
 
     scope = {
-        typeString: "4xscope",
-        typeId: TypeToId["4xscope"]
+        typeString: "1xscope",
+        typeId: TypeToId["1xscope"]
     };
 
     weapons: [Gun, Gun, Melee, Throwable] = [
@@ -296,7 +296,7 @@ export class Player extends GameObject {
         useEnd: number
     };
 
-    scopeToResetTo = "4xscope";
+    scopeToResetTo = "1xscope";
 
     performActionAgain = false;
     lastActionType = 0;
@@ -345,7 +345,7 @@ export class Player extends GameObject {
         this.socket = socket;
 
         this.name = name;
-        this.zoom = Constants.scopeZoomRadius.desktop["4xscope"];
+        this.zoom = Constants.scopeZoomRadius.desktop["1xscope"];
         this.actionItem = { typeString: "", typeId: 0, duration: 0, useEnd: -1 };
         this.joinTime = Date.now();
 
@@ -377,16 +377,16 @@ export class Player extends GameObject {
 
 
         // Weapon The Player Is Holding
-        const initialGun1: Gun = {
-            typeString: "spas12",
-            typeId: TypeToId["spas12"],
-            ammo: 9,
-            customClip: Weapons["spas12"].maxClip,
-            cooldown: 0,
-            cooldownDuration: 0,
-            switchCooldown: 0,
-            weaponType: WeaponType.Gun
-        };
+        // const initialGun1: Gun = {
+        //     typeString: "spas12",
+        //     typeId: TypeToId["spas12"],
+        //     ammo: 9,
+        //     customClip: Weapons["spas12"].maxClip,
+        //     cooldown: 0,
+        //     cooldownDuration: 0,
+        //     switchCooldown: 0,
+        //     weaponType: WeaponType.Gun
+        // };
         // const initialGun1: Gun = {
         //     typeString: "mosin",
         //     typeId: TypeToId["mosin"],
@@ -419,16 +419,16 @@ export class Player extends GameObject {
         //     despawnOnDeath: true,
         //     weaponType: WeaponType.Gun
         // }
-        const initialGun2: Gun = {
-            typeString: "mosin",
-            typeId: TypeToId["mosin"],
-            ammo: 5,
-            customClip: Weapons["mosin"].maxClip,
-            cooldown: 0,
-            cooldownDuration: 0,
-            switchCooldown: 0,
-            weaponType: WeaponType.Gun
-        };
+        // const initialGun2: Gun = {
+        //     typeString: "mosin",
+        //     typeId: TypeToId["mosin"],
+        //     ammo: 5,
+        //     customClip: Weapons["mosin"].maxClip,
+        //     cooldown: 0,
+        //     cooldownDuration: 0,
+        //     switchCooldown: 0,
+        //     weaponType: WeaponType.Gun
+        // };
         // const initialGun2: Gun = {
         //     typeString: "m870",
         //     typeId: TypeToId["m870"],
@@ -441,10 +441,10 @@ export class Player extends GameObject {
 
 
         // Introduce a flag to customize or use the default loadout
-        const useCustomLoadout = true; // Set this to false to use the default loadout
+        // const useCustomLoadout = true; // Set this to false to use the default loadout
 
-        this.weapons[0] = initialGun1;
-        this.weapons[1] = initialGun2;
+        // this.weapons[0] = initialGun1;
+        // this.weapons[1] = initialGun2;
 
         let throwableTypeString = "";
         if (this.inventory.frag != 0){
@@ -1025,17 +1025,17 @@ export class Player extends GameObject {
      * only called if this player object is the one being revived
      */
     beingRevived(){
-        // if (!this.anim.active) {
-        //     this.anim.active = true;
-        //     this.anim.type = 6;
-        //     this.anim.seq = 1;
-        //     this.anim.time = 0;
-        //     this.anim.duration = Constants.player.reviveDuration * 30 + 10; //added 10 ticks to sync animation to action
-        //     this.reviveState = 2; //player is reviving someone
-        // }
+        if (!this.anim.active) {
+            this.anim.active = true;
+            this.anim.type = 6;
+            this.anim.seq = 1;
+            this.anim.time = 0;
+            this.anim.duration = Constants.player.reviveDuration * 30 + 10; //added 10 ticks to sync animation to action
+            this.reviveState = 2; //player is reviving someone
+        }
 
-        // this.game.fullDirtyObjects.add(this);
-        // this.fullDirtyObjects.add(this);
+        this.game.fullDirtyObjects.add(this);
+        this.fullDirtyObjects.add(this);
     }
 
     // why does this need to be static?
@@ -1049,10 +1049,16 @@ export class Player extends GameObject {
      * if a player throws a nade and immediately switches to a gun or melee, you still want to reference the nade not the new active weapon
      */
     useThrowable(): void {
+
+        if (this.downed) {
+            return;
+        }
         const proj = new Projectile(this.weapons[3].typeString, this.game, this.position, this.layer, this.direction, this, this.ticksSinceCookStart);
         this.game.dynamicObjects.add(proj);
         this.game.projectiles.add(proj);
         this.inventory[this.weapons[3].typeString]--;
+
+       
 
         if (this.inventory[this.weapons[3].typeString] == 0){
             const throwables = Object.keys(LootTables["tier_throwables"]).filter(t => this.inventory[t] != 0);
@@ -1083,11 +1089,11 @@ export class Player extends GameObject {
             return;
         }
 
-        // if (this.game.gamemode == GameMode.BattleRoyale){
-        //     if (this.game.allowJoin){
-        //         return;
-        //     }
-        // }
+        if (this.game.gamemode == GameMode.BattleRoyale){
+            if (this.game.allowJoin){
+                return;
+            }
+        }
 
         if ((this.activeWeapon as Gun).ammo === 0) {
             this.shooting = false;
@@ -1407,24 +1413,24 @@ export class Player extends GameObject {
 
             //revives are only a thing in battleroyale
             // if player has default skin or if theyre disconnected, they cannot be downed and this logic is skipped
-            // if (this.game.gamemode == GameMode.BattleRoyale){
-            //     if (Config.skinsAreTeam && this.downed == false && !(this.loadout.outfit == TypeToId.outfitBase) && this.disconnected == false && numTeammates != 0){
-            //         this.health = 100;
-            //         let bleedingDamageId = setInterval(() => {
-            //             if (this._health == 0 || this.downed == false){
-            //                 clearInterval(bleedingDamageId);
-            //             }
-            //             this.damage(4, undefined, undefined, DamageType.Bleeding);
-            //         }, 1000);
-            //         this.boost = 0;
-            //         this.downed = true;
-            //         this.fullUpdate = true;
-            //         this.recalculateSpeed();
-            //         this.game.fullDirtyObjects.add(this);
-            //         this.fullDirtyObjects.add(this);
-            //         return;
-            //     }
-            // }
+            if (this.game.gamemode == GameMode.BattleRoyale){
+                if (Config.skinsAreTeam && this.downed == false && !(this.loadout.outfit == TypeToId.outfitBase) && this.disconnected == false && numTeammates != 0){
+                    this.health = 100;
+                    let bleedingDamageId = setInterval(() => {
+                        if (this._health == 0 || this.downed == false){
+                            clearInterval(bleedingDamageId);
+                        }
+                        this.damage(4, undefined, undefined, DamageType.Bleeding);
+                    }, 1000);
+                    this.boost = 0;
+                    this.downed = true;
+                    this.fullUpdate = true;
+                    this.recalculateSpeed();
+                    this.game.fullDirtyObjects.add(this);
+                    this.fullDirtyObjects.add(this);
+                    return;
+                }
+            }
 
             //if player bleeds out, give the kill to the last player that damaged "this" while not downed
             source = this.lastPlayerToDamageThis;

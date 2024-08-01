@@ -142,7 +142,7 @@ export class GameMap {
 
         if (!Debug.disableMapGeneration) {
             // Docks
-            this.genOnShore(ObjectKind.Building, "warehouse_complex_01", 0, 72, 0, 1);
+            this.genOnShore(ObjectKind.Building, "warehouse_complex_01", 1, 72, 0, 1);
 
             // Small shore buldiong thing (idk)
             this.genOnShore(ObjectKind.Building, "shack_03b", 1, 57, 1);
@@ -150,7 +150,7 @@ export class GameMap {
             // Conch bunker
             
             // Huts
-            this.genOnShore(ObjectKind.Building, "hut_01", 1, 27, 1);
+            this.genOnShore(ObjectKind.Building, "hut_01", 2, 27, 1);
             this.genOnShore(ObjectKind.Building, "hut_02", 1, 27, 1);
             this.genOnShore(ObjectKind.Building, "hut_03", 1, 27, 1);
  
